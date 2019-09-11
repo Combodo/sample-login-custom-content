@@ -1,0 +1,111 @@
+{# @copyright   Copyright (C) 2010-2019 Combodo SARL #}
+{# @license     http://opensource.org/licenses/AGPL-3.0 #}
+#login-body {
+    background: #F5F7FA;
+    overflow: auto;
+}
+#login-content-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 224px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    border: 3px solid #CBD2D9;
+    border-radius: 3px;
+    background-color: #fff;
+    min-width: 740px;
+    display: table-row;
+    color: #37322f;
+    font-size: 12px;
+}
+#login-content-container h1 {
+    color: #1C94C4;
+    font-size: 16pt;
+    font-weight: normal;
+}
+#login-additional-content, #login-content {
+    width: 49%;
+    height: 100%;
+    padding: 20px;
+    display: table-cell;
+    border: 0;
+    position: relative;
+}
+#login-additional-content
+{
+    background-color: #F5F7FA;
+    padding-bottom: 20px;
+}
+#login-content
+{
+    width: 49%;
+    background-color: #fff;
+    border-radius: 4px;
+    
+}
+@media (max-height: 700px) {
+    #login-content {
+        margin-top: 0;
+    }
+    #login-content-container {
+        margin-top: 74px;
+    }
+
+}
+@media (max-width: 740px)
+{
+    #login-logo {
+        margin-top: 0;
+    }
+    #login-content {
+        margin-top: 0px;
+    }
+    #login-additional-content, #login-content {
+        width: auto;
+        margin: 0;
+        display: block;
+    }
+    #login-content-container {
+        margin: 0;
+        margin-top: 74px;
+        min-width: 100%;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+    }
+}
+    
+.login-additional-content-title
+{
+    margin-left: 28px;
+    font-size: 16px;
+    color: #1A202C;
+}
+.row {
+    margin: 31px 0px;
+}
+.row > img {
+background-color: #CBD2D9;
+border-radius: 78px;
+filter: grayscale(1);
+height: 40px;
+display: inline-block;
+margin-left: 22px;
+float: left;
+margin-right: 10px;
+vertical-align: middle;
+padding: 5px;
+}
+
+.row > div {
+    left: 22px;
+    padding-left: 9px;
+    margin-left: 5px;
+}
+.row h1 {
+    color: #2D3748;
+    font-size: 12px;
+    font-weight: normal;
+}
