@@ -22,8 +22,8 @@
 namespace Combodo\iTop\LoginCustomContent;
 
 use iLoginUIExtension;
-use LoginBlockData;
-use LoginTwigData;
+use LoginBlockExtension;
+use LoginTwigContext;
 use utils;
 
 /**
@@ -42,18 +42,13 @@ class CustomContentLoginExtension implements  iLoginUIExtension
 		return array('form','basic', 'external', 'url');
 	}
 
-	/**
-	 * @return LoginTwigData
-	 */
-	public function GetTwigBlockData()
+	public function GetTwigContext()
 	{
-		$sPath = APPROOT.'env-'.utils::GetCurrentEnvironment().'/itop-login-custom-content/view';
-		$oLoginData = new LoginTwigData(array(), $sPath);
-		$oLoginData->AddBlockData('body', new LoginBlockData('base.html.twig'));
-		$oLoginData->AddBlockData('login_additional_content', new LoginBlockData('additional_content.html.twig'));
+		$oLoginContext = new LoginTwigContext();
+		$oLoginContext->SetLoaderPath(utils::GetAbsoluteModulePath('itop-login-custom-content').'view');
+		$oLoginContext->AddCSSFile(utils::GetAbsoluteUrlModulesRoot().'itop-login-custom-content/css/custom.css');
+		$oLoginContext->AddBlockExtension('login_additional_content', new LoginBlockExtension('additional_content.html.twig'));
 
-		$oLoginData->AddBlockData('css', new LoginBlockData('custom_css.css.twig'));
-
-		return $oLoginData;
+		return $oLoginContext;
 	}
 }
