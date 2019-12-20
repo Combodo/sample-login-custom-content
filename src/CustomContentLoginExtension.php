@@ -39,7 +39,7 @@ class CustomContentLoginExtension implements  iLoginUIExtension
 	 */
 	public function ListSupportedLoginModes()
 	{
-		return array('form','basic', 'external', 'url');
+		return array('form');
 	}
 
 	public function GetTwigContext()
@@ -47,7 +47,8 @@ class CustomContentLoginExtension implements  iLoginUIExtension
 		$oLoginContext = new LoginTwigContext();
 		$oLoginContext->SetLoaderPath(utils::GetAbsoluteModulePath('itop-login-custom-content').'view');
 		$oLoginContext->AddCSSFile(utils::GetAbsoluteUrlModulesRoot().'itop-login-custom-content/css/custom.css');
-		$oLoginContext->AddBlockExtension('login_additional_content', new LoginBlockExtension('additional_content.html.twig'));
+		$oLoginContext->AddJsFile(utils::GetAbsoluteUrlModulesRoot().'itop-login-custom-content/js/custom.js');
+//		$oLoginContext->AddBlockExtension('login_content', new LoginBlockExtension('login_content.html.twig'));
 
 		return $oLoginContext;
 	}

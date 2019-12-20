@@ -5,9 +5,10 @@ This extension is a preview of what is achievable through our new login page (iT
 ![Preview](docs/preview1.png)
 
 It features :
-* A redefinition of ```base.html.twig``` to add markup used for display
-* An overload of ```additional_content.html.twig``` to add data to the login screen (right pane)
+* A redefinition of ```view/extensionblock/loginforminput.html.twig``` to add markup used for display
 * A custom css to customize login screen page
-* A responsive design for smaller devices
+
 
 ![Preview](docs/preview2.png)
+
+many thanks to Vincenzo Chianese who given the original code on [codepen](https://codepen.io/XVincentX/pen/avRqep)
