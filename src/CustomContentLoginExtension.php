@@ -45,8 +45,8 @@ class CustomContentLoginExtension implements  iLoginUIExtension
 	public function GetTwigContext()
 	{
 		$oLoginContext = new LoginTwigContext();
-		$oLoginContext->SetLoaderPath(utils::GetAbsoluteModulePath('itop-login-custom-content').'view');
-		$oLoginContext->AddCSSFile(utils::GetAbsoluteUrlModulesRoot().'itop-login-custom-content/css/custom.css');
+		$oLoginContext->SetLoaderPath(utils::GetAbsoluteModulePath('sample-login-custom-content').'view');
+		$oLoginContext->AddCSSFile(utils::GetAbsoluteUrlModulesRoot().'sample-login-custom-content/css/custom.css');
 		$oLoginContext->AddBlockExtension('login_additional_content', new LoginBlockExtension('additional_content.html.twig'));
 
 		return $oLoginContext;
